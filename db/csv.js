@@ -4,11 +4,11 @@ const faker = require('faker');
 var csv = require('fast-csv');
 var fs = require('fs');
 
-const {DocumentStore} = require('ravendb');
-const store = new DocumentStore('http://localhost:8080', 'test');
-store.initialize();
-const session = store.openSession();
-const bulkInsert = store.bulkInsert();
+// const {DocumentStore} = require('ravendb');
+// const store = new DocumentStore('http://localhost:8080', 'test');
+// store.initialize();
+// const session = store.openSession();
+// const bulkInsert = store.bulkInsert();
 
 var csvStream = csv.createWriteStream({headers: true}),
   writableStream = fs.createWriteStream('./list.csv')
@@ -22,7 +22,7 @@ const records = [];
 
 csvStream.pipe(writableStream);
 
-for (let c = 0; c <= 1000000; c++) {
+for (let c = 0; c <= 1000; c++) {
   let rand = Math.floor(Math.random() * 20 + 20);
   for (let i = 0; i < rand; i++) {
 
