@@ -57,7 +57,6 @@
     "newrelic": "^4.11.0",
     "performance-now": "^2.1.0",
     "pg": "^7.6.1",
-    "pg-copy-streams": "^1.2.0",
     "ravendb": "^4.0.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
